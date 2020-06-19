@@ -29,6 +29,6 @@ net:
 >3. bert-large-uncased-whole-word-masking-finetuned-squad
 >4. .....
 
-***2. train model!***
+***3. train model!***
 > python -m src.main configs/train/task2.yaml 
 
