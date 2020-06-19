@@ -13,9 +13,9 @@ dataset:
         max_length: 512
         cause_or_effect: 'cause'
 ``` 
-cause_or_effect = cause / effect
+>cause_or_effect = cause / effect
 
-***2. select the pretrain model config file***
+***2. specify the pretrain model in config file***
 ```python=
 net:
     name: 'pretrainedNet'
@@ -29,6 +29,14 @@ net:
 >3. bert-large-uncased-whole-word-masking-finetuned-squad
 >4. .....
 
-***3. train model!***
+***3. Remember to save both cause/effect model in different path***
+```python=
+main:
+    random_seed: 5487
+    saved_dir: '/nfs/nas-5.1/wbcheng/nlp_task2/model/Bert_Base_effect'
+```
+>change saved_dir path
+
+***4. train model!***
 > python -m src.main configs/train/task2.yaml 
 
